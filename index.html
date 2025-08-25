@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mehmet Kaan Demir</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+
+    body {
+      background: #fff;
+      color: #111;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(255,255,255,0.9);
+      backdrop-filter: blur(10px);
+      padding: 1rem 3rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #eaeaea;
+      z-index: 1000;
+    }
+
+    header h1 {
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+
+    nav a {
+      margin-left: 2rem;
+      text-decoration: none;
+      color: #111;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #0071e3; /* Apple blue */
+    }
+
+    section {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 6rem 2rem;
+    }
+
+    .hero {
+      text-align: center;
+      padding-top: 8rem;
+    }
+
+    .hero h2 {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: #555;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    .content {
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 1rem;
+      color: #333;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .skill {
+      padding: 0.7rem 1.5rem;
+      border: 1px solid #ddd;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      background: #f9f9f9;
+      transition: transform 0.2s ease;
+    }
+
+    .skill:hover {
+      transform: scale(1.05);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #777;
+      border-top: 1px solid #eee;
+      margin-top: 3rem;
+    }
+
+    /* Smooth Scroll */
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Mehmet Kaan Demir</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#education">Education</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Hi, I'm Mehmet Kaan</h2>
+    <p> Mechanical Engineering student passionate about technology, innovation, and making a positive impact.</p>
+  </section>
+
+  <section id="about">
+    <h3 class="section-title">About Me</h3>
+    <div class="content">
+      <p>
+        As a Mechanical Engineering student, I am deeply fascinated by the intersection of technology and innovation. 
+        I’ve gained hands-on experience with 3D modeling in SolidWorks, focusing on functional and aesthetically pleasing solutions. 
+        Beyond engineering, I explore economics and finance to better understand the dynamics of business and society. 
+        I am also a motorsports enthusiast, culture lover, and active environmental volunteer.
+      </p>
+    </div>
+  </section>
+
+  <section id="education">
+    <h3 class="section-title">Education</h3>
+    <div class="content">
+      <p><strong>Istanbul University</strong> – Bachelor’s degree, Economics (2023 – Present)</p>
+      <p><strong>Samsun Üniversitesi</strong> – Bachelor’s degree, Mechanical Engineering (2021 – Present)</p>
+    </div>
+  </section>
+
+  <section id="experience">
+    <h3 class="section-title">Experience</h3>
+    <div class="content">
+      <p><strong>Erdemli Sweepers, Corum</strong> – Mechanical Engineering Intern (July 2024 – August 2024)</p>
+      <ul>
+        <li>Contributed to final assembly stage of superstructure production for Ford trucks.</li>
+        <li>Ensured quality and precision in assembly processes.</li>
+        <li>Created 3D models to support design and manufacturing projects.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h3 class="section-title">Skills & Certifications</h3>
+    <div class="skills">
+      <span class="skill">FESTO hydraulics </span>
+      <span class="skill">Leadership</span>
+      <span class="skill">SolidWorks</span>
+      <span class="skill">Apple Software</span>
+      <span class="skill">Microsoft Office</span>
+      <span class="skill">Exercising Leadership - HarvardX</span>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h3 class="section-title">Contact</h3>
+    <div class="content" style="text-align:center;">
+      <p>Email: <a href="mailto:mehmetkaandemir6@gmail.com">mehmetkaandemir6@gmail.com</a></p>
+      <p>Location: Samsun, Turkey</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Mehmet Kaan Demir.</p>
+  </footer>
+
+  <script>
+    // Optional smooth reveal effect
+    const sections = document.querySelectorAll("section");
+    const revealOnScroll = () => {
+      const triggerBottom = window.innerHeight * 0.85;
+      sections.forEach(sec => {
+        const rect = sec.getBoundingClientRect().top;
+        if(rect < triggerBottom){
+          sec.style.opacity = "1";
+          sec.style.transform = "translateY(0)";
+        }
+      });
+    };
+
+    sections.forEach(sec => {
+      sec.style.opacity = "0";
+      sec.style.transform = "translateY(50px)";
+      sec.style.transition = "all 0.8s ease-out";
+    });
+
+    window.addEventListener("scroll", revealOnScroll);
+    window.addEventListener("load", revealOnScroll);
+  </script>
+</body>
+</html>
